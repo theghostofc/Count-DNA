@@ -12,6 +12,7 @@ cv2.imshow("Original Image", src)
 
 # Initialize parameters
 height, width = src.shape
+# Play with these to change the behavior of the algorithm
 blockSize = 5
 C = -7
 
@@ -25,6 +26,8 @@ _, contours, hierarchy = cv2.findContours(amtImage, cv2.RETR_LIST, cv2.CHAIN_APP
 
 # Initialize numpy array, will be used to export the image with labels
 labeledImage = np.zeros((height, width, 1), np.uint8)
+
+# Change color or scale to draw contours differently
 color = (255, 255, 255)
 scale = 1
 count = 0
